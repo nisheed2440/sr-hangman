@@ -1,0 +1,89 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~tachyons";
+//Variables
+$font-family-sans-serif: 'Gotham',Helvetica,Arial,sans-serif;
+$font-family-serif : 'Miller',"Times New Roman",Times,serif;
+$font-family-gotham-book: 'Gotham Book',Helvetica,Arial,sans-serif;
+//Mixins
+@mixin font-classes($font-family:$font-family-sans-serif, $font-weight:normal, $font-style:normal) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-style: $font-style;
+}
+
+//Styles
+* {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+//Globals
+html{
+    position: relative;
+    min-height: 100%;
+}
+body{
+  background-image: url('/assets/images/splash-screen-bg.png');
+  background-repeat: no-repeat;
+}
+
+.flex-spacer{
+  flex: 1;
+}
+
+// font letter-spacing
+.f-ls {
+  letter-spacing: 0.12em; //em(2px);
+}
+
+.srf-g {
+  // Gotham medium
+  &m {
+    @include font-classes($font-family-sans-serif, 500);
+  } // Gotham book
+  &b {
+    @include font-classes($font-family-gotham-book);
+  }
+}
+
+// Miller font
+.srf-m {
+  @include font-classes($font-family-serif, 500);
+  letter-spacing: normal;
+}
+
+.particles-js-canvas-el {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.logo-mw {
+  max-width: 250px;
+}
+
+.btn-primary,
+.btn-positive,
+.btn-negative,
+.btn-warning{
+  .icon{
+    color: #FFFFFF;
+  }
+}
+
+.app-offline:not(.offline-ui) {
+	-webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.container{
+    @media screen and (min-width: 500px){
+        width: 500px;
+    }
+}
