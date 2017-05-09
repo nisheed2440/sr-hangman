@@ -1,3 +1,42 @@
-<p>
-  hangman works!
-</p>
+<div class="header h2 bg-white f7 srf-gb">
+  <div class="flex flex-row w-100 h-100 items-center">
+    <div class="truncate ph2">SCORE: 9999</div>
+    <div class="flex-auto tc truncate ph1">Nisheed</div>
+    <div class="truncate ph2">TIME: 99:99:99</div>
+  </div>
+</div>
+<div class="flex-spacer" (focus)="inputFocusHandler()" tabindex="1">
+  <div class="flex flex-column w-100 h-100 overflow-y-auto">
+    <div class="w-100 h-100 flex flex-column justify-center items-center overflow-x-auto srf-gm">
+      <p *ngIf="showFocusMsg" class="f6 srf-gm tc ttu white">
+        Seems like you lost your focus!<br>
+        <a class="pointer f6 link dim ba ph3 pv2 mv2 dib white srf-gm ttu tl" (click)="inputFocusHandler()">
+          <div class="flex flex-row items-center w-100 h-100">
+            <span >Continue</span>
+          </div>
+        </a>
+      </p>
+      <div class="hangman">
+        <form class="hangman-input">
+          <input #hangmanLetter type="text" name="letter" value="" class="" maxlength="1" (keyup)="keyupHandler($event)" (blur)="inputBlurHandler()" tabindex="1"/>
+        </form>
+        <ul class="list pa0 ma0" *ngFor="let word of hangman.words">
+          <li class="f5 f3-m f2-l fl tc ttu pv1 mh1 bb bw1 b--white" *ngFor="let letter of word.letters" [ngClass]="{'white': letter !== '*', 'trasparent': letter === '*'}">
+            {{letter}}
+          </li>
+        </ul>
+      </div>
+      <div class="wrong-letters flex flex-column justify-center">
+        <h3 class="f7 f6-m f4-l white ttu tc mt4 mb2">wrong words</h3>
+        <ul class="list pa0 mt1 mb1 center">
+          <li class="f6 f5-m f4-l fl tc ttu pa2 mh1 bg-light-red white">W</li>
+          <li class="f6 f5-m f4-l fl tc ttu pa2 mh1 bg-light-red white">E</li>
+          <li class="f6 f5-m f4-l fl tc ttu pa2 mh1 bg-light-red white">I</li>
+          <li class="f6 f5-m f4-l fl tc ttu pa2 mh1 bg-light-red white">O</li>
+          <li class="f6 f5-m f4-l fl tc ttu pa2 mh1 bg-light-red white">O</li>
+          <li class="f6 f5-m f4-l fl tc ttu pa2 mh1 bg-light-red white">O</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

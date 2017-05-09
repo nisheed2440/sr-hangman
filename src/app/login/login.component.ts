@@ -1,3 +1,4 @@
+import { FirebaseService } from '../firebase.service';
 import { Component, OnInit } from '@angular/core';
 
 interface LoginType {
@@ -18,11 +19,23 @@ export class LoginComponent implements OnInit {
     { type:'google',icon:'google'},
     { type:'github',icon:'github'}
   ];
-  constructor() { }
+  constructor(private firebaseService: FirebaseService) {
+  }
   ngOnInit() {
   }
   loginHandler(loginType: LoginType, index: number): void {
     console.log(loginType);
+    switch (loginType.type) {
+      case 'google':
+        this.firebaseService.loginWithGoogle();
+        break;
+      case 'github':
+        this.firebaseService.loginWithGithub();
+        break;
+    }
   }
 
+  logoutHandler(){
+    this.firebaseService.logout();
+  }
 }

@@ -5,12 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { HangmanComponent } from './hangman/hangman.component';
 import { AboutComponent } from './about/about.component';
-import { LeaderboardComponent } from './leaderboard/leaderboard.component';
-import { NotFoundComponent } from './not-found/not-found.component';
 import { FooterComponent } from './footer/footer.component';
+import { AmpDashModule } from 'amp-dash';
 
 /**
  * This is the main application module where all the components, modules and providers are declared.
@@ -18,18 +15,15 @@ import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    HangmanComponent,
     AboutComponent,
-    LeaderboardComponent,
-    NotFoundComponent,
     FooterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AmpDashModule
   ],
   providers: [],
   bootstrap: [AppComponent]
