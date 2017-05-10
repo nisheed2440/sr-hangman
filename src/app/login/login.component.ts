@@ -10,18 +10,32 @@ interface LoginType {
   selector: 'sr-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  host:{
-    class:'db w-100 h-100 overflow-y-auto'
+  host: {
+    class: 'db w-100 h-100 overflow-y-auto'
   }
+
 })
 export class LoginComponent implements OnInit {
-  loginTypes:LoginType[] = [
-    { type:'google',icon:'google'},
-    { type:'github',icon:'github'}
+  loginTypes: LoginType[] = [{
+      type: 'google',
+      icon: 'google'
+    },
+    {
+      type: 'github',
+      icon: 'github'
+    }
   ];
+
   constructor(private firebaseService: FirebaseService) {
   }
   ngOnInit() {
+    this.firebaseService.getUser().subscribe(data => {
+      if (data) {
+        console.log(data.displayName, data.photoURL);
+      }
+      console.log(data);
+    });
+
   }
   loginHandler(loginType: LoginType, index: number): void {
     console.log(loginType);
@@ -35,7 +49,8 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  logoutHandler(){
+  logoutHandler() {
     this.firebaseService.logout();
   }
+
 }

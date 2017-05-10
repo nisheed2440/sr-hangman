@@ -1,3 +1,4 @@
+import { FirebaseService } from '../firebase.service';
 import { LeaderboardComponent } from './leaderboard.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -7,17 +8,18 @@ import { NgModule } from '@angular/core';
     declarations:[
         LeaderboardComponent
     ],
-    imports:[
+    imports: [
         CommonModule,
         RouterModule.forChild([
             { path: '', component: LeaderboardComponent }
         ])
     ],
-    entryComponents:[
+    entryComponents: [
         LeaderboardComponent
     ],
     exports: [
         CommonModule
-    ]
+    ],
+    providers: [FirebaseService]
 })
 export class LeaderboardModule {}
