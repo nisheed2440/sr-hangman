@@ -1,7 +1,11 @@
 <div #particlesScreen id="particles"></div>
-<div class="flex flex-column w-100 h-100">
-  <div class="flex flex-row flex-spacer">
+<div class="summit-bg"></div>
+<div class="summit-bg-btm"></div>
+<div fxLayout="column" fxFlex="auto">
+  <div fxLayout="column" fxFlex="auto" class="container">
     <router-outlet></router-outlet>
   </div>
-  <sr-footer></sr-footer>
+  <div fxFlex="nogrow">
+    <sr-footer></sr-footer>
+  </div>
 </div>

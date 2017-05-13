@@ -1,33 +1,23 @@
-<div class="flex flex-row flex-column-ns w-100 h-100 justify-center items-center">
-  <div class="container git dt-ns w-100">
-    <div class="dt-row-ns">
-      <div class="dtc-ns tc tr-ns">
-        <div class="logo-mw center ph4 ph3-ns">
-          <img src="assets/images/sr-logo-16x9.png" alt="SapientRazorfish Logo">
-        </div>
-      </div>
-      <div class="dtc-ns tc tl-ns v-mid-ns">
-        <div class="dt w-100">
-          <div class="dt-row" *ngFor="let loginType of loginTypes;let i = index;">
-            <div class="dtc">
-              <a class="pointer f6 link dim ba ph3 pv2 mb2 dib white srf-gm ttu tl" (click)="loginHandler(loginType,i)">
-                <div class="flex flex-row items-center w-100 h-100">
-                  <span [ngClass]="'socicon-' + loginType.icon" class="f3"></span>
-                  <span class="pl2">login with {{loginType.type}}</span>
-                </div>
-              </a>
-            </div>
+<div class="login-container">
+  <div fxLayout="column" fxFlex="auto" fxLayoutAlign="center center">
+    <div class="login-panel columns">
+      <div class="column is-6-tablet is-offset-3-tablet is-4-desktop is-offset-4-desktop">
+        <nav class="panel">
+          <div class="panel-tabs">
+              <img src="assets/images/summit-2017.svg" alt="Summit 2017 Logo">
           </div>
-          <div class="dt-row">
-            <div class="dtc">
-               <a class="pointer f6 link dim ba ph3 pv2 mb2 dib white srf-gm ttu tl" (click)="logoutHandler()">
-                <div class="flex flex-row items-center w-100 h-100">
-                  <span>Logout</span>
-                </div>
-              </a>
-            </div>
+          <div class="panel-tabs">
+            <a class="is-active srf-gm f-ls ttu">js jargons</a>
           </div>
-        </div>
+          <div class="panel-block" *ngFor="let loginType of loginTypes;let i = index;">
+            <button class="button is-primary ttc srf-gb is-fullwidth" (click)="loginHandler(loginType,i)">
+              <span class="icon">
+                <i class="fa" [ngClass]="'fa-' + loginType.icon"></i>
+              </span>
+              <span>{{loginType.type}}</span>
+            </button>
+          </div>
+        </nav>
       </div>
     </div>
   </div>

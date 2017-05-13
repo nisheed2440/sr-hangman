@@ -1,0 +1,33 @@
+:host{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+}
+.summit-bg{
+    background-image: url(../assets/images/summit-2017-bg.svg);
+    background-position: top right;
+    background-repeat: no-repeat;
+     background-size: contain;
+    position: fixed;
+    width: 100%;
+    height: 150px;
+
+}
+.summit-bg-btm{
+    background-image: url(../assets/images/summit-2017-bg-btm.svg);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    bottom: 30px;
+    left:0;
+}
+.container{
+    overflow: auto;
+    width: 100%;
+    position: relative;
+}

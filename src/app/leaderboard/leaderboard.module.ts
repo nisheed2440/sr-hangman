@@ -1,3 +1,4 @@
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { FirebaseService } from '../firebase.service';
 import { LeaderboardComponent } from './leaderboard.component';
 import { CommonModule } from '@angular/common';
@@ -12,7 +13,8 @@ import { NgModule } from '@angular/core';
         CommonModule,
         RouterModule.forChild([
             { path: '', component: LeaderboardComponent }
-        ])
+        ]),
+        FlexLayoutModule
     ],
     entryComponents: [
         LeaderboardComponent

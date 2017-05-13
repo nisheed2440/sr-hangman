@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~tachyons";
+//Bulma variable overrides
+@import "./assets/sass/_variables";
+//Bulma imports
+@import "~bulma/sass/utilities/_all";
+@import "~bulma/sass/base/_all";
+@import "~bulma/sass/grid/_all";
+@import "~bulma/sass/elements/_all";
+@import "~bulma/sass/components/_all";
+
 //Variables
 $font-family-sans-serif: 'Gotham',Helvetica,Arial,sans-serif;
 $font-family-serif : 'Miller',"Times New Roman",Times,serif;
@@ -23,10 +31,6 @@ $font-family-gotham-book: 'Gotham Book',Helvetica,Arial,sans-serif;
 html{
     position: relative;
     min-height: 100%;
-}
-body{
-  background-image: url('/assets/images/splash-screen-bg.png');
-  background-repeat: no-repeat;
 }
 
 .flex-spacer{
@@ -57,6 +61,18 @@ body{
   letter-spacing: normal;
 }
 
+.ttu {
+  text-transform: uppercase;
+}
+
+.ttc {
+  text-transform: capitalize;
+}
+
+.ttl {
+  text-transform: lowercase;
+}
+
 .particles-js-canvas-el {
   position: fixed;
   width: 100%;
@@ -70,23 +86,14 @@ body{
   max-width: 250px;
 }
 
-.btn-primary,
-.btn-positive,
-.btn-negative,
-.btn-warning{
-  .icon{
-    color: #FFFFFF;
-  }
-}
-
 .app-offline:not(.offline-ui) {
 	-webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
 	filter: grayscale(100%);
 }
 
-.container{
-    @media screen and (min-width: 500px){
-        width: 500px;
-    }
+.ellipses{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

@@ -1,56 +1,36 @@
-<header class="measure center">
-  <h1 class="flex flex-row items-center f3 srf-gb ttu pa2 v-mid black-60">
-    <span class="flex-auto">leaderboard</span>
-    <a class="pointer f6 link dim ba ph3 pv2 dib white bg-black ttu">Refesh</a>
-  </h1>
-</header>
-
-<div class="overflow-auto">
-  <ul class="list pl0 mt0 measure center">
-    <li class="flex items-center lh-copy pa3 ph0-l bb b--black-10 srf-gb">
-      <span class="f5 db srf-gm pr2 black-70">01</span>
-      <img class="w2 h2 w3-ns h3-ns br-100" src="http://tachyons.io/img/avatar-mrmrs.jpg" />
-      <div class="ph3 flex-auto">
-        <span class="f6 db black-70">Nisheed Jagdish</span>
-        <span class="f7 db black-70 truncate">nisheed2016@gmail.com</span>
-        <span class="f7 db black-70">
-          
-        </span>
+<div class="leaderboard-container">
+  <div fxLayout="column" fxFlex="auto" fxLayoutAlign="center center">
+    <div class="leaderboard-panel columns">
+      <div class="column is-6-tablet is-offset-3-tablet">
+        <nav class="panel">
+          <div class="panel-tabs">
+            <img src="assets/images/summit-2017.svg" alt="Summit 2017 Logo">
+          </div>
+          <div class="panel-tabs srf-gb">
+            <a class="is-active srf-gm f-ls ttu">leaderboard</a>
+          </div>
+          <div class="panel-block" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+              <div class="media">
+                <figure class="media-left">
+                  <p class="image is-48x48">
+                    <img src="http://bulma.io/images/placeholders/96x96.png">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content srf-gb">
+                    <p>
+                      <strong>Nisheed Jagadish</strong> <small>nisheed2016@gmail.com</small><br>
+                      <span class="icon is-small"><i class="fa fa-star"></i></span>
+                      <small>9999</small>&nbsp;
+                      <span class="icon is-small"><i class="fa fa-clock-o"></i></span>
+                      <small>99:99:99</small>&nbsp;
+                    </p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </nav>
       </div>
-      <div>
-        <span class="f7 black-60">SCORE: 9999</span>
-        <span class="f7 black-60">TIME: 9999</span>
-      </div>
-    </li>
-    <li class="flex items-center lh-copy pa3 ph0-l bb b--black-10">
-      <img class="w2 h2 w3-ns h3-ns br-100" src="http://tachyons.io/img/avatar-jxnblk.jpg" />
-      <div class="pl3 flex-auto">
-        <span class="f6 db black-70">Jxnblk</span>
-        <span class="f6 db black-70">Large Circle, Inc</span>
-      </div>
-      <div>
-        <a href="tel:" class="f6 link blue hover-dark-gray">+1 (999) 555-5555</a>
-      </div>
-    </li>
-    <li class="flex items-center lh-copy pa3 ph0-l bb b--black-10">
-      <img class="w2 h2 w3-ns h3-ns br-100" src="http://tachyons.io/img/avatar-jasonli.jpg" />
-      <div class="pl3 flex-auto">
-        <span class="f6 db black-70">Jason Li</span>
-        <span class="f6 db black-70">Little Blue Square, Inc</span>
-      </div>
-      <div>
-        <a href="tel:" class="f6 link blue hover-dark-gray">+1 (999) 555-5555</a>
-      </div>
-    </li>
-    <li class="flex items-center lh-copy pa3 ph0-l bb b--black-10">
-      <img class="w2 h2 w3-ns h3-ns br-100" src="http://tachyons.io/img/avatar-yavor.jpg" />
-      <div class="pl3 flex-auto">
-        <span class="f6 db black-70">Yavor</span>
-        <span class="f6 db black-70">Large Circle, Inc</span>
-      </div>
-      <div>
-        <a href="tel:" class="f6 link blue hover-dark-gray">+1 (999) 555-5555</a>
-      </div>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>

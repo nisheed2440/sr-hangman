@@ -2,7 +2,8 @@ import { AboutComponent } from './about/about.component';
 import { NgModule }              from '@angular/core';
 import { RouterModule, Routes }  from '@angular/router';
 
-const appRoutes: Routes = [{
+const appRoutes: Routes = [
+  {
     path: 'login',
     loadChildren: './login/login.module#LoginModule'
   },

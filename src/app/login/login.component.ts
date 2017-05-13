@@ -9,11 +9,7 @@ interface LoginType {
 @Component({
   selector: 'sr-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
-  host: {
-    class: 'db w-100 h-100 overflow-y-auto'
-  }
-
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
   loginTypes: LoginType[] = [{
