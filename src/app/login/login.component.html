@@ -1,24 +1,28 @@
-<div class="login-container">
-  <div fxLayout="column" fxFlex="auto" fxLayoutAlign="center center">
-    <div class="login-panel columns">
-      <div class="column is-6-tablet is-offset-3-tablet is-4-desktop is-offset-4-desktop">
-        <nav class="panel">
-          <div class="panel-tabs">
-              <img src="assets/images/summit-2017.svg" alt="Summit 2017 Logo">
+<div class="page-container">
+  <div class="full-screen">
+    <div class="main">
+      <main>
+        <div class="columns">
+          <div class="column is-10-mobile is-offset-1-mobile is-6-tablet is-offset-3-tablet is-4-desktop is-offset-4-desktop">
+            <nav class="login-panel panel">
+              <div class="panel-tabs">
+                <img src="assets/images/summit-2017.svg" alt="Summit 2017 Logo">
+              </div>
+              <div class="panel-tabs">
+                <a class="is-active srf-gm f-ls ttu">js jargons</a>
+              </div>
+              <div class="panel-block" *ngFor="let loginType of loginTypes;let i = index;">
+                <button class="button is-primary ttc srf-gb is-fullwidth" (click)="loginHandler(loginType,i)">
+                  <span class="icon">
+                    <i class="fa" [ngClass]="'fa-' + loginType.icon"></i>
+                  </span>
+                  <span>{{loginType.type}}</span>
+                </button>
+              </div>
+            </nav>
           </div>
-          <div class="panel-tabs">
-            <a class="is-active srf-gm f-ls ttu">js jargons</a>
-          </div>
-          <div class="panel-block" *ngFor="let loginType of loginTypes;let i = index;">
-            <button class="button is-primary ttc srf-gb is-fullwidth" (click)="loginHandler(loginType,i)">
-              <span class="icon">
-                <i class="fa" [ngClass]="'fa-' + loginType.icon"></i>
-              </span>
-              <span>{{loginType.type}}</span>
-            </button>
-          </div>
-        </nav>
-      </div>
+        </div>
+      </main>
     </div>
   </div>
 </div>

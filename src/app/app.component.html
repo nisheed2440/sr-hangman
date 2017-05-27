@@ -1,11 +1,13 @@
 <div #particlesScreen id="particles"></div>
 <div class="summit-bg"></div>
 <div class="summit-bg-btm"></div>
-<div fxLayout="column" fxFlex="auto">
-  <div fxLayout="column" fxFlex="auto" class="container">
-    <router-outlet></router-outlet>
-  </div>
-  <div fxFlex="nogrow">
-    <sr-footer></sr-footer>
+<div class="root-container">
+  <div class="full-screen">
+    <div class="main">
+      <router-outlet></router-outlet>
+    </div>
+    <div>
+      <sr-footer></sr-footer>
+    </div>
   </div>
 </div>

@@ -1,36 +1,40 @@
-<div class="leaderboard-container">
-  <div fxLayout="column" fxFlex="auto" fxLayoutAlign="center center">
-    <div class="leaderboard-panel columns">
-      <div class="column is-6-tablet is-offset-3-tablet">
-        <nav class="panel">
-          <div class="panel-tabs">
-            <img src="assets/images/summit-2017.svg" alt="Summit 2017 Logo">
-          </div>
-          <div class="panel-tabs srf-gb">
-            <a class="is-active srf-gm f-ls ttu">leaderboard</a>
-          </div>
-          <div class="panel-block" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
-              <div class="media">
-                <figure class="media-left">
-                  <p class="image is-48x48">
-                    <img src="http://bulma.io/images/placeholders/96x96.png">
-                  </p>
-                </figure>
-                <div class="media-content">
-                  <div class="content srf-gb">
-                    <p>
-                      <strong>Nisheed Jagadish</strong> <small>nisheed2016@gmail.com</small><br>
-                      <span class="icon is-small"><i class="fa fa-star"></i></span>
-                      <small>9999</small>&nbsp;
-                      <span class="icon is-small"><i class="fa fa-clock-o"></i></span>
-                      <small>99:99:99</small>&nbsp;
-                    </p>
-                  </div>
-                </div>
+<div class="page-container">
+  <div class="full-screen">
+    <div class="main">
+      <main>
+        <div class="columns">
+          <div class="column is-6-tablet is-offset-3-tablet">
+            <nav class="leaderboard-panel panel">
+              <div class="panel-tabs">
+                <img src="assets/images/summit-2017.svg" alt="Summit 2017 Logo">
               </div>
+              <div class="panel-tabs srf-gb">
+                <a class="is-active srf-gm f-ls ttu">leaderboard</a>
+              </div>
+              <div class="panel-block" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+                  <div class="media">
+                    <figure class="media-left">
+                      <p class="image is-48x48">
+                        <img src="http://bulma.io/images/placeholders/96x96.png">
+                      </p>
+                    </figure>
+                    <div class="media-content">
+                      <div class="content srf-gb">
+                        <p>
+                          <strong>Nisheed Jagadish</strong> <small>nisheed2016@gmail.com</small><br>
+                          <span class="icon is-small"><i class="fa fa-star"></i></span>
+                          <small>9999</small>&nbsp;
+                          <span class="icon is-small"><i class="fa fa-clock-o"></i></span>
+                          <small>99:99:99</small>&nbsp;
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </nav>
           </div>
-        </nav>
-      </div>
+        </div>
+      </main>
     </div>
   </div>
 </div>
